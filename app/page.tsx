@@ -42,7 +42,7 @@ export default function Home() {
             width={1400}
             alt="screenshot"
             className="absolute scale-[130%] -bottom-36 left-10 skew-x-8 -rotate-10 z-0"
-            src="/tome.png"
+            src="/tome.webp"
           />
         </div>
         <FeaturesSection />
