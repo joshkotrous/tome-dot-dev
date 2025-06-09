@@ -5,6 +5,7 @@ import { Instrument_Serif } from "next/font/google";
 const instrumentSerif = Instrument_Serif({
   style: ["italic", "normal"],
   weight: ["400"],
+  subsets: ["latin"],
 });
 export default function Logo({
   className,
