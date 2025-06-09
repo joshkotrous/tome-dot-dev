@@ -98,6 +98,7 @@ export function MobileMenu() {
               variants={panel}
             >
               <Link
+                onClick={() => setOpen((prev) => !prev)}
                 className="text-zinc-400 hover:text-white transition-colors"
                 href="#features"
               >
@@ -105,6 +106,7 @@ export function MobileMenu() {
               </Link>
               <div className="h-0.5 bg-zinc-800 w-full"></div>
               <Link
+                onClick={() => setOpen((prev) => !prev)}
                 className="text-zinc-400 hover:text-white transition-colors"
                 href="#faq"
               >
@@ -113,6 +115,7 @@ export function MobileMenu() {
               <div className="h-0.5 bg-zinc-800 w-full"></div>
 
               <Link
+                onClick={() => setOpen((prev) => !prev)}
                 className="text-zinc-400 hover:text-white transition-colors"
                 href="#docs"
               >
