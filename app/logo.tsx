@@ -19,7 +19,7 @@ export default function Logo({
       <TomeLogo className={cn("size-14", logoClass)} />
       <h1
         className={cn(
-          `${instrumentSerif.className}  tracking-wide italic text-5xl`,
+          `${instrumentSerif.className}  tracking-wide text-5xl`,
           className
         )}
       >
