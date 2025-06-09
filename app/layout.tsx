@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Logo from "./logo";
-import Link from "next/link";
-import DownloadButton from "./downloadButton";
+import Nav from "./nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,45 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
-        <div className="w-full fixed top-0 left-0 z-50">
-          <div className="w-full relative p-3">
-            <div className="grid grid-cols-3 items-center border-2 bg-zinc-950 shadow-[0_8px_14px_-12px_rgba(255,255,255,0.1)] shadow-white p-4 rounded-md">
-              <Logo className="text-3xl gap-2.5" logoClass="size-8" />
-              <div className="flex items-center justify-center gap-4">
-                <Link
-                  className="text-zinc-400 hover:text-white transition-all"
-                  href="#features"
-                >
-                  Features
-                </Link>
-                <Link
-                  className="text-zinc-400 hover:text-white transition-all"
-                  href="#faq"
-                >
-                  FAQ
-                </Link>
-                <Link
-                  className="text-zinc-400 hover:text-white transition-all"
-                  href="#faq"
-                >
-                  Docs
-                </Link>
-              </div>
-              <div className="justify-end flex gap-2">
-                <div className="scale-120 relative top-1.5">
-                  <iframe
-                    src="https://ghbtns.com/github-btn.html?user=joshkotrous&repo=tome&type=star&size=medium"
-                    width="60"
-                    height="20"
-                    title="GitHub"
-                  ></iframe>
-                </div>
-                <DownloadButton className="p-2 h-fit text-xs p-1" size="sm" />
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <Nav />
         {children}
       </body>
     </html>
