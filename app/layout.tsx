@@ -16,8 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tome",
-  description: "Never Write SQL Again",
+  title: "Tome | Never Write SQL Again",
+  description:
+    "The AI-native database client that translates natural language into perfect queries. Ask questions in plain English and get instant results.",
 };
 
 export default function RootLayout({
