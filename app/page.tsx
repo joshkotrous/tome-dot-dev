@@ -10,12 +10,12 @@ export default function Home() {
     <div className="">
       <main className="overflow-auto size-full">
         <div className="relative overflow-hidden h-screen w-screen flex justify-center items-center">
-          <div className=" relative z-40  justify-center flex flex-col gap-4 items-center p-3 overflow-hidden">
-            <Logo />
-            <h2 className="text-4xl text-center font-bold bg-gradient-to-b from-white to-zinc-400 text-transparent bg-clip-text">
+          <div className=" relative z-40  justify-center flex flex-col gap-4 items-center p-3">
+            <Logo className="lg:text-6xl" logoClass="lg:size-16" />
+            <h2 className="text-4xl lg:text-6xl text-center font-bold bg-gradient-to-b from-white to-zinc-400 text-transparent bg-clip-text">
               Never Write SQL Again
             </h2>
-            <h3 className="text-center text-zinc-400 max-w-xl font-medium">
+            <h3 className="text-center text-zinc-400 max-w-xl font-medium lg:text-lg">
               The AI-native database client that translates natural language
               into perfect queries. Ask questions in plain English and get
               instant results.
