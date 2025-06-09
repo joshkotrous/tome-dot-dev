@@ -12,7 +12,7 @@ export default function Home() {
         <div className="relative overflow-hidden h-screen w-screen flex justify-center items-center">
           <div className=" relative z-40  justify-center flex flex-col gap-4 items-center p-3 overflow-hidden">
             <Logo />
-            <h2 className="text-4xl font-bold bg-gradient-to-b from-white to-zinc-400 text-transparent bg-clip-text">
+            <h2 className="text-4xl text-center font-bold bg-gradient-to-b from-white to-zinc-400 text-transparent bg-clip-text">
               Never Write SQL Again
             </h2>
             <h3 className="text-center text-zinc-400 max-w-xl font-medium">
