@@ -48,8 +48,22 @@ export default function RootLayout({
                 >
                   FAQ
                 </Link>
+                <Link
+                  className="text-zinc-400 hover:text-white transition-all"
+                  href="#faq"
+                >
+                  Docs
+                </Link>
               </div>
-              <div className="justify-end flex">
+              <div className="justify-end flex gap-2">
+                <div className="scale-120 relative top-1.5">
+                  <iframe
+                    src="https://ghbtns.com/github-btn.html?user=joshkotrous&repo=tome&type=star&size=medium"
+                    width="60"
+                    height="20"
+                    title="GitHub"
+                  ></iframe>
+                </div>
                 <DownloadButton className="p-2 h-fit text-xs p-1" size="sm" />
               </div>
             </div>
