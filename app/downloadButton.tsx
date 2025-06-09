@@ -55,7 +55,10 @@ export default function DownloadButton({
       <Button
         size={size}
         variant="secondary"
-        className={cn("text-lg py-8 rounded-sm border gap-2", className)}
+        className={cn(
+          "text-lg py-8 rounded-sm border gap-2 hover:bg-zinc-900",
+          className
+        )}
       >
         {label}
         {icon}
