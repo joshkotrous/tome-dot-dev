@@ -15,6 +15,12 @@ export default function Nav() {
           <Logo className="text-3xl gap-2.5" logoClass="size-8" />
           <div className=" items-center justify-center gap-4 hidden md:flex ">
             <Link
+              className="text-zinc-400 hover:text-white transition-colors"
+              href="/downloads"
+            >
+              Downloads
+            </Link>
+            <Link
               className="text-zinc-400 hover:text-white transition-all"
               href="#features"
             >
@@ -100,7 +106,15 @@ export function MobileMenu() {
               <Link
                 onClick={() => setOpen((prev) => !prev)}
                 className="text-zinc-400 hover:text-white transition-colors"
-                href="#features"
+                href="/downloads"
+              >
+                Downloads
+              </Link>
+              <div className="h-0.5 bg-zinc-800 w-full"></div>
+              <Link
+                onClick={() => setOpen((prev) => !prev)}
+                className="text-zinc-400 hover:text-white transition-colors"
+                href="/#features"
               >
                 Features
               </Link>
@@ -108,7 +122,7 @@ export function MobileMenu() {
               <Link
                 onClick={() => setOpen((prev) => !prev)}
                 className="text-zinc-400 hover:text-white transition-colors"
-                href="#faq"
+                href="/#faq"
               >
                 FAQ
               </Link>

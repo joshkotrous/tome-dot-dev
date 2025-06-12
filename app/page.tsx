@@ -35,7 +35,7 @@ export default function Home() {
               </div>
               {/* <StarOnGithubButton /> */}
             </div>
-            <DownloadButton />
+            <DownloadButton showViewDownloads />
           </div>
           <div className="absolute bottom-0 md:-bottom-24 lg:-bottom-96 pointer-events-none backdrop-blur-sm">
             <Image
