@@ -13,18 +13,14 @@ export default function DownloadsPage() {
         </div>
         <div className="space-y-3">
           {Object.entries(DOWNLOADS).map(([os, download]) => (
-            <div
+            <Link
               key={os}
-              className="p-4 px-6 border rounded-sm bg-zinc-900 hover:bg-zinc-900/75 transition-all"
+              href={download.href}
+              className="p-4 px-6 flex gap-4 justify-between items-center font-medium text-lg border rounded-sm bg-zinc-900 hover:bg-zinc-900/75 transition-all"
             >
-              <Link
-                href={download.href}
-                className="flex gap-4 justify-between items-center font-medium text-lg"
-              >
-                {download.label}
-                {download.icon}
-              </Link>
-            </div>
+              {download.label}
+              {download.icon}
+            </Link>
           ))}
         </div>
       </div>
