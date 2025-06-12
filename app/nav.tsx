@@ -24,19 +24,19 @@ export default function Nav() {
             </Link>
             <Link
               className="text-zinc-400 hover:text-white transition-all"
-              href="#features"
+              href="/#features"
             >
               Features
             </Link>
             <Link
               className="text-zinc-400 hover:text-white transition-all"
-              href="#faq"
+              href="/#faq"
             >
               FAQ
             </Link>
             <Link
               className="text-zinc-400 hover:text-white transition-all"
-              href="#faq"
+              href="/#faq"
             >
               Docs
             </Link>
