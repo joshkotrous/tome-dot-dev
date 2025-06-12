@@ -12,7 +12,9 @@ export default function Nav() {
     <div className="w-full fixed top-0 left-0 z-50">
       <div className="w-full relative p-3">
         <div className="grid grid-cols-2 md:grid-cols-3 items-center border-2 bg-zinc-950 shadow-[0_8px_14px_-12px_rgba(255,255,255,0.1)] shadow-white p-4 rounded-md">
-          <Logo className="text-3xl gap-2.5" logoClass="size-8" />
+          <Link href="/">
+            <Logo className="text-3xl gap-2.5" logoClass="size-8" />
+          </Link>
           <div className=" items-center justify-center gap-4 hidden md:flex ">
             <Link
               className="text-zinc-400 hover:text-white transition-colors"
