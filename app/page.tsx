@@ -4,6 +4,7 @@ import Logo from "./logo";
 import FeaturesSection from "./features";
 import FAQSection from "./faq";
 import DownloadButton from "./downloadButton";
+import SupportSection from "./support";
 
 export default function Home() {
   return (
@@ -70,6 +71,7 @@ export default function Home() {
         </div>
         <FeaturesSection />
         <FAQSection />
+        <SupportSection />
       </main>
     </div>
   );

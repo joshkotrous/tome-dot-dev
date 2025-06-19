@@ -7,6 +7,14 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const navOptions = [
+  { title: "Downloads", url: "/downloads" },
+  { title: "Features", url: "/#features" },
+  { title: "FAQ", url: "/#faq" },
+  { title: "Docs", url: "/#faq" },
+  { title: "Support", url: "/support" },
+];
+
 export default function Nav() {
   return (
     <div className="w-full fixed top-0 left-0 z-50">
@@ -16,30 +24,15 @@ export default function Nav() {
             <Logo className="text-3xl gap-2.5" logoClass="size-8" />
           </Link>
           <div className=" items-center justify-center gap-4 hidden md:flex ">
-            <Link
-              className="text-zinc-400 hover:text-white transition-colors"
-              href="/downloads"
-            >
-              Downloads
-            </Link>
-            <Link
-              className="text-zinc-400 hover:text-white transition-all"
-              href="/#features"
-            >
-              Features
-            </Link>
-            <Link
-              className="text-zinc-400 hover:text-white transition-all"
-              href="/#faq"
-            >
-              FAQ
-            </Link>
-            <Link
-              className="text-zinc-400 hover:text-white transition-all"
-              href="/#faq"
-            >
-              Docs
-            </Link>
+            {navOptions.map((i) => (
+              <Link
+                key={i.title}
+                className="text-zinc-400 hover:text-white transition-colors"
+                href={i.url}
+              >
+                {i.title}
+              </Link>
+            ))}
           </div>
           <div className="justify-end gap-2 hidden md:flex">
             <div className="scale-120 relative top-1.5">
@@ -102,43 +95,20 @@ export function MobileMenu() {
             variants={backdrop}
           >
             <motion.div
-              className="overflow-hidden h-full bg-zinc-950 border-2 rounded-md flex flex-col text-3xl gap-2 p-4 items-end"
+              className="overflow-hidden h-full bg-zinc-950 border-2 rounded-md flex flex-col text-3xl p-4 items-end"
               variants={panel}
             >
-              <Link
-                onClick={() => setOpen((prev) => !prev)}
-                className="text-zinc-400 hover:text-white transition-colors"
-                href="/downloads"
-              >
-                Downloads
-              </Link>
-              <div className="h-0.5 bg-zinc-800 w-full"></div>
-              <Link
-                onClick={() => setOpen((prev) => !prev)}
-                className="text-zinc-400 hover:text-white transition-colors"
-                href="/#features"
-              >
-                Features
-              </Link>
-              <div className="h-0.5 bg-zinc-800 w-full"></div>
-              <Link
-                onClick={() => setOpen((prev) => !prev)}
-                className="text-zinc-400 hover:text-white transition-colors"
-                href="/#faq"
-              >
-                FAQ
-              </Link>
-              <div className="h-0.5 bg-zinc-800 w-full"></div>
-
-              <Link
-                onClick={() => setOpen((prev) => !prev)}
-                className="text-zinc-400 hover:text-white transition-colors"
-                href="#docs"
-              >
-                Docs
-              </Link>
-              <div className="h-0.5 bg-zinc-800 w-full"></div>
-              <div className="flex items-center gap-2">
+              {navOptions.map((i) => (
+                <Link
+                  key={i.title}
+                  onClick={() => setOpen((prev) => !prev)}
+                  className="text-zinc-400 hover:text-white transition-colors border-b-2 py-3.5 w-full text-end hover:border-white"
+                  href={i.url}
+                >
+                  {i.title}
+                </Link>
+              ))}
+              <div className="flex items-center gap-2 py-2">
                 <div className="scale-120 relative top-1">
                   <iframe
                     src="https://ghbtns.com/github-btn.html?user=joshkotrous&repo=tome&type=star&size=medium"
