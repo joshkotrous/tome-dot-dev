@@ -52,16 +52,56 @@ export default function Home() {
         <div className="container mx-auto py-20 px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Like Cursor, but for your Database
+            </h2>
+            <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+              Interface with your database like you would in Cursor - but with
+              full database context in Editor Mode.
+            </p>
+          </div>
+
+          <video
+            src="/editor-agent.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="mx-auto shadow-lg rounded-md border-2"
+          />
+        </div>
+        <div className="container mx-auto py-20 px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ask Questions → Get Instant Data
             </h2>
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
               Skip the SQL - get answers in the time it takes to think of the
-              question
+              question with Agent Mode
             </p>
           </div>
 
           <video
             src="/demo.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="mx-auto shadow-lg rounded-md border-2"
+          />
+        </div>
+        <div className="container mx-auto py-20 px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Full Database Context with Semantic Indexing
+            </h2>
+            <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+              Tome automatically builds a semantic index of your schema, so it
+              always understands your database in context.
+            </p>
+          </div>
+
+          <video
+            src="/semantic-gen.webm"
             autoPlay
             loop
             muted
