@@ -6,7 +6,7 @@ import DownloadButton from "./downloadButton";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { track } from "@vercel/analytics";
+import StarOnGithub from "./starOnGithubButton";
 
 const navOptions = [
   { title: "Downloads", url: "/downloads" },
@@ -37,13 +37,7 @@ export default function Nav() {
           </div>
           <div className="justify-end gap-2 hidden md:flex">
             <div className="scale-120 relative top-1.5">
-              <iframe
-                onClick={() => track(`Star on Github`)}
-                src="https://ghbtns.com/github-btn.html?user=joshkotrous&repo=tome&type=star&size=medium"
-                width="60"
-                height="20"
-                title="GitHub"
-              ></iframe>
+              <StarOnGithub />
             </div>
             <DownloadButton className="p-2 h-fit text-xs p-1" size="sm" />
           </div>
@@ -112,13 +106,7 @@ export function MobileMenu() {
               ))}
               <div className="flex items-center gap-2 py-2">
                 <div className="scale-120 relative top-1">
-                  <iframe
-                    onClick={() => track(`Star on Github`)}
-                    src="https://ghbtns.com/github-btn.html?user=joshkotrous&repo=tome&type=star&size=medium"
-                    width="60"
-                    height="20"
-                    title="GitHub"
-                  ></iframe>
+                  <StarOnGithub height={20} width={20} />
                 </div>
                 <DownloadButton className="p-2 h-fit text-xs p-1" size="sm" />
               </div>
