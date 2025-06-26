@@ -7,6 +7,7 @@ import MacIcon from "./macIcon";
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { track } from "@vercel/analytics";
 
 type OS = "mac" | "windows" | "linux" | "macIntel";
 
@@ -62,7 +63,12 @@ export default function DownloadButton({
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <Link href={href} className="inline-block" download>
+      <Link
+        onClick={() => track(`Main Download Link - ${os}`)}
+        href={href}
+        className="inline-block"
+        download
+      >
         {" "}
         {/* download attr = direct save */}
         <Button

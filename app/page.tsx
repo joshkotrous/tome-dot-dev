@@ -5,6 +5,7 @@ import FeaturesSection from "./features";
 import FAQSection from "./faq";
 import DownloadButton from "./downloadButton";
 import SupportSection from "./support";
+import { track } from "@vercel/analytics";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
               </div>
               <div className="scale-120">
                 <iframe
+                  onClick={() => track(`Star on Github`)}
                   src="https://ghbtns.com/github-btn.html?user=joshkotrous&repo=tome&type=star&count=true&size=medium"
                   width="80"
                   height="20"

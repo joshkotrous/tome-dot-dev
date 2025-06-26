@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { DOWNLOADS } from "../downloadButton";
+import { track } from "@vercel/analytics";
 
 export default function DownloadsPage() {
   return (
@@ -14,6 +15,7 @@ export default function DownloadsPage() {
         <div className="space-y-3">
           {Object.entries(DOWNLOADS).map(([os, download]) => (
             <Link
+              onClick={() => track(`Downloads Page Link - ${os}`)}
               key={os}
               href={download.href}
               className="p-4 px-6 flex gap-4 justify-between items-center font-medium text-lg border rounded-sm bg-zinc-900 hover:bg-zinc-900/75 transition-all"
