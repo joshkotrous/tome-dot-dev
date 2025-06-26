@@ -17,6 +17,7 @@ export default function StarOnGithub({
       target="_blank"
     >
       <iframe
+        onClick={(e) => e.preventDefault()}
         src="https://ghbtns.com/github-btn.html?user=joshkotrous&repo=tome&type=star&size=medium"
         width={width}
         height={height}
