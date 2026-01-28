@@ -62,20 +62,17 @@ export default function DownloadButton({
   const { label, href, icon } = DOWNLOADS[os];
 
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center gap-3">
       <Link
         onClick={() => track(`Main Download Link - ${os}`)}
         href={href}
-        className="inline-block"
+        className="inline-block group"
         download
       >
-        {" "}
-        {/* download attr = direct save */}
         <Button
           size={size}
-          variant="secondary"
           className={cn(
-            "text-lg py-8 rounded-sm border gap-2 hover:bg-zinc-900",
+            "relative text-base font-medium py-6 px-6 rounded-xl gap-2.5 bg-white text-zinc-900 hover:bg-zinc-100 shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_2px_4px_rgba(0,0,0,0.2),0_8px_16px_rgba(0,0,0,0.4)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.2),0_4px_8px_rgba(0,0,0,0.3),0_16px_32px_rgba(0,0,0,0.5)] transition-all duration-300",
             className
           )}
         >
@@ -86,9 +83,9 @@ export default function DownloadButton({
       {showViewDownloads && (
         <Link
           href="/downloads"
-          className="text-zinc-300 hover:text-white transition-all"
+          className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors duration-200"
         >
-          View Downloads
+          View all downloads →
         </Link>
       )}
     </div>
