@@ -10,6 +10,7 @@ import StarOnGithub from "./starOnGithubButton";
 
 const navOptions = [
   { title: "Downloads", url: "/downloads" },
+  { title: "Releases", url: "/releases" },
   { title: "Features", url: "/#features" },
   { title: "FAQ", url: "/#faq" },
   { title: "Docs", url: "/#faq" },
